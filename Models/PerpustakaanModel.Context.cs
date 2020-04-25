@@ -43,5 +43,7 @@ namespace LibraryWeb.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LoginByUsernamePassword_Result>("LoginByUsernamePassword", usernameParameter, passwordParameter);
         }
+
+        public System.Data.Entity.DbSet<LibraryWeb.Models.BukuViewModel> BukuViewModels { get; set; }
     }
 }

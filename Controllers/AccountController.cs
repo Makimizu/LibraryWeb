@@ -145,7 +145,14 @@ namespace LibraryWeb.Controllers
         // GET: Account
         public ActionResult Index()
         {
-            return View();
+            var result = from User in databaseManager.Users select User;
+            return View(result);
+        }
+
+        public ActionResult Create()
+        {
+            var result = from User in databaseManager.Users select User;
+            return View(result);
         }
     }
 }

@@ -40,7 +40,7 @@
                         @if (Convert.ToString(this.Session["Role"]) == "A")
                         {
                             <li><a href="@Url.Action("Index", "Buku")">Buku</a></li>
-                            <li><a href="@Url.Action("Index", "User")">User</a></li>
+                            <li><a href="@Url.Action("Index", "Account")">User</a></li>
                             <li><a href="@Url.Action("Index", "Pinjam")">Peminjaman</a></li>
                             <li><a href="@Url.Action("Index", "Kembali")">Pengembalian</a></li>
                             <li><a href="@Url.Action("LogOff", "Account", Url.Action("Login", "Account"))">Log Off</a></li>

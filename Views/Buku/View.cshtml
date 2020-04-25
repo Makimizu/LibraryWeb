@@ -1,0 +1,51 @@
+﻿@model IEnumerable<LibraryWeb.Models.Buku>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Judul)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pengarang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Jenis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tarif)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Judul)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pengarang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jenis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tarif)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdBuku }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdBuku }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdBuku })
+        </td>
+    </tr>
+}
+
+</table>
